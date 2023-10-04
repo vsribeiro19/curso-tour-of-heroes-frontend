@@ -1,7 +1,7 @@
 <h2>Lista de Guitarristas</h2>
 
-<ul *ngFor="let hero of heroes">
-    <li (click)="onSelected(hero)">{{hero.id}} - {{ hero.name }}</li>
+<ul *ngFor="let hero of heroes" class="heroes">
+    <li [class.selected]="hero === selectedHero" (click)="onSelected(hero)">{{hero.id}} - {{ hero.name }}</li>
 </ul>
 
 <div *ngIf="selectedHero">
